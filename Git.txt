@@ -100,3 +100,6 @@ merge the branches together
 
 delete a branch
 	$ git branch -d branchName
+
+
+main changes
