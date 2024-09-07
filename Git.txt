@@ -84,4 +84,5 @@ $ git branch
 switch branch
 $ git switch branchName
 
-
+merge the branches together
+$ git merge -m "merge message" branchToMerge
