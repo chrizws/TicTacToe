@@ -2,17 +2,17 @@ Git - open source and free source control management (SCM)
 Manage changes to files over time, view previous changes, compare different versions, track changes
 
 setup user name
-$ git config --global user.name "First Last"
+	$ git config --global user.name "First Last"
 
 setup email address
-$ git config --global user.email "test@gmail.com"
+	$ git config --global user.email "test@gmail.com"
 
 initialize repository
-$ cd c:\folder\repository
-$ git init
+	$ cd c:\folder\repository
+	$ git init
 
 status of repository
-$ git status
+	$ git status
 
 
 
@@ -20,37 +20,35 @@ $ git status
 if any files are untracked then Git won't keep track of any changes to that file
 
 to stage or track a file, staging prepares the file to be committed
-$ git add filename.txt (case sensitive and include file extension)
+	$ git add filename.txt (case sensitive and include file extension)
 
 to track all the files in a folder to the staging area
-$ git add .
-$ git add A
-$ git add --All
+	$ git add .
+	$ git add A
+	$ git add --All
 
 to unstage or untrack a file
-$ git rm --cached filename.txt
+	$ git rm --cached filename.txt
 
 to ignore files and prevent tracking
-create .gitignore file or use powershell "ren gitignore.txt .gitignore" to rename gitignore.txt to .gitignore file
-add file name or *.ext to ignore all ext type files
-git will ignore all associated files
-
+	create .gitignore file or use powershell "ren gitignore.txt .gitignore" to rename gitignore.txt to .gitignore file
+	add file name or *.ext to ignore all ext type files
 
 
 
 	
 Commit takes a snapshot of files at this moment in time
-$ git commit -m "insert commit message here"
+	$ git commit -m "insert commit message here"
 
 to display changes in the committed file vs what's changed in the uncomitted file
-$ git diff
+	$ git diff
 
 to delete file from commit and file explorer
-$ git rm filename
+	$ git rm filename
 
 to restore file that was deleted
-$ git restore --staged filename (if used git rm filename)
-$ git restore filename (if deleted from file explorer)
+	$ git restore --staged filename (if used git rm filename)
+	$ git restore filename (if deleted from file explorer)
 
 
 
@@ -70,36 +68,35 @@ three types of git environments
 
 
 to view all the commit history
-$ git log
-$ git log --online (formats the entry to one line)
+	$ git log
+	$ git log --online (formats the entry to one line)
 
 to amend the last committed message
-$ git commit -m "change the last committed message" --amend
+	$ git commit -m "change the last committed message" --amend
 
 to view comprehensive changes in the log
-$ git log -p
+	$ git log -p
 
 to restore to a previous committed versions
-$ git reset hashcode
+	$ git reset hashcode
 
 rebasing modifies commit orders, removals, and other advance changes to commits
-$ git rebase -i --root
+	$ git rebase -i --root
 
 
 
 
 create a new branch
-$ git branch branchName
+	$ git branch branchName
 
 view current branches
-$ git branch
+	$ git branch
 
 switch branch
-$ git switch branchName
+	$ git switch branchName
 
 merge the branches together
-$ git merge -m "merge message" branchToMerge
+	$ git merge -m "merge message" branchToMerge
 
 delete a branch
-$ git branch -d branchName
-
+	$ git branch -d branchName
