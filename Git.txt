@@ -39,6 +39,9 @@ $ git commit -m "insert commit message here"
 to display changes in the committed file vs what's changed in the uncomitted file
 $ git diff
 
+to delete file from commit and system folder permanently
+$ git rm filename
+
 three types of git environments
 	working tree to make changes and edits
 		to commit directly without going to staging 
