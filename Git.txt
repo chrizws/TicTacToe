@@ -11,7 +11,7 @@ initialize repository
 	$ cd c:\folder\repository
 	$ git init
 
-status of repository
+state of working directory and staging area
 	$ git status
 
 
@@ -19,7 +19,7 @@ status of repository
 
 if any files are untracked then Git won't keep track of any changes to that file
 
-to stage or track a file, staging prepares the file to be committed
+to stage a single file, staging prepares the file to be committed
 	$ git add filename.txt (case sensitive and include file extension)
 
 to track all the files in a folder to the staging area
@@ -34,6 +34,9 @@ to ignore files and prevent tracking
 	create .gitignore file or use powershell "ren gitignore.txt .gitignore" to rename gitignore.txt to .gitignore file
 	add file name or *.ext to ignore all ext type files
 
+reset staging area to the last commit
+	$ git reset
+
 
 
 	
@@ -43,7 +46,7 @@ Commit takes a snapshot of files at this moment in time
 to display changes in the committed file vs what's changed in the uncomitted file
 	$ git diff
 
-to delete file from commit and file explorer
+to delete file from staging and working directory
 	$ git rm filename
 
 to restore file that was deleted
@@ -107,8 +110,8 @@ delete a branch
 
 
 
-push the main branch from local to github cloud repo
-	$ git remote add origin http://github.com/user/repo.git //link to the specific repo 
+create connection to remote repository
+	$ git remote add origin http://github.com/user/repo.git
 	
 	$ git branch -M main //target the main branch on github
 	
