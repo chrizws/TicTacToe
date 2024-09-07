@@ -80,3 +80,8 @@ $ git branch branchName
 
 view current branches
 $ git branch
+
+switch branch
+$ git switch branchName
+
+
