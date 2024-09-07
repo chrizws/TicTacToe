@@ -94,6 +94,9 @@ view current branches
 
 switch branch
 	$ git switch branchName
+	
+create and switch to new branch
+	$ git switch -c branchName
 
 merge the branches together
 	$ git merge -m "merge message" branchToMerge
