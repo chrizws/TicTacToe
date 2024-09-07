@@ -116,3 +116,11 @@ push the main branch from local to github cloud repo
 	
 push all the branches
 	$ git push --all 
+	
+	
+fetch remote repo to local repo
+	$ git fetch
+	$ git merge
+
+fetch and merge as one command
+	$ git pull
