@@ -7,12 +7,8 @@ $ git config --global user.name "First Last"
 setup email address
 $ git config --global user.email "test@gmail.com"
 
-setup default branch name
-$ git config --global init.default branch main
-
 initialize repository
 $ cd c:\folder\repository
-
 $ git init
 
 status of repository
@@ -23,11 +19,23 @@ if any files are untracked then Git won't keep track of any changes to that file
 to stage or track a file
 $ git add filename.txt (case sensitive and include file extension)
 
+to track all the files in a folder
+$ git add .
+$ git add A
+$ git add --All
+
 to unstage or untrack a file
 $ git rm --cached filename.txt
 
-ignore files from commit
-create .gitignore file
+to ignore files and prevent tracking
+create .gitignore file or use powershell "ren gitignore.txt .gitignore" to rename gitignore.txt to .gitignore file
 add file name or *.ext to ignore all ext type files
+git will ignore all associated files
 
-	use powershell "ren gitignore.txt .gitignore" to rename gitignore.txt to .gitignore file
+	
+Commit takes a snapshot of files at this moment in time
+$ git commit -m "insert commit message here"
+
+to display changes in the committed file vs what's changed in the uncomitted file
+$ git diff
+
