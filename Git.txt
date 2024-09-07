@@ -104,4 +104,13 @@ merge the branches together
 delete a branch
 	$ git branch -d branchName
 
-main changes
+
+
+
+push local repo to github cloud repo
+	$ git remote add origin http://github.com/user/repo.git
+	
+	$ git branch -M main
+	
+	$ git push -u origin main
+	
