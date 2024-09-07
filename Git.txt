@@ -73,3 +73,10 @@ $ git reset hashcode
 
 rebasing modifies commit orders, removals, and other advance changes to commits
 $ git rebase -i --root
+
+
+create a new branch
+$ git branch branchName
+
+view current branches
+$ git branch
