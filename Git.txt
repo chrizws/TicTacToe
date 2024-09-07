@@ -16,10 +16,10 @@ $ git status
 
 if any files are untracked then Git won't keep track of any changes to that file
 
-to stage or track a file
+to stage or track a file, staging prepares the file to be committed
 $ git add filename.txt (case sensitive and include file extension)
 
-to track all the files in a folder
+to track all the files in a folder to the staging area
 $ git add .
 $ git add A
 $ git add --All
@@ -39,3 +39,10 @@ $ git commit -m "insert commit message here"
 to display changes in the committed file vs what's changed in the uncomitted file
 $ git diff
 
+three types of git environments
+	working tree to make changes and edits
+	staging / index tracks the files to be committed 
+		remove from staging back to working files environments
+		$ git restore --staged filename
+	commit takes the changes made into the log
+	
