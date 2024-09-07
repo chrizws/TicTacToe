@@ -41,8 +41,12 @@ $ git diff
 
 three types of git environments
 	working tree to make changes and edits
+		to commit directly without going to staging 
+		$ git commit -a -m "commit directly and skips staging"
+		
 	staging / index tracks the files to be committed 
 		remove from staging back to working files environments
 		$ git restore --staged filename
+		
 	commit takes the changes made into the log
 	
