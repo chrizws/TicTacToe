@@ -107,10 +107,12 @@ delete a branch
 
 
 
-push local repo to github cloud repo
-	$ git remote add origin http://github.com/user/repo.git
+push the main branch from local to github cloud repo
+	$ git remote add origin http://github.com/user/repo.git //link to the specific repo 
 	
-	$ git branch -M main
+	$ git branch -M main //target the main branch on github
 	
-	$ git push -u origin main
+	$ git push -u origin main //push the local main branch
 	
+push all the branches
+	$ git push --all 
