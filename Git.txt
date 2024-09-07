@@ -39,8 +39,13 @@ $ git commit -m "insert commit message here"
 to display changes in the committed file vs what's changed in the uncomitted file
 $ git diff
 
-to delete file from commit and system folder permanently
+to delete file from commit and file explorer
 $ git rm filename
+
+to restore file that was deleted
+$ git restore --staged filename (if used git rm filename)
+$ git restore filename (if deleted from file explorer)
+
 
 three types of git environments
 	working tree to make changes and edits
@@ -52,4 +57,19 @@ three types of git environments
 		$ git restore --staged filename
 		
 	commit takes the changes made into the log
-	
+
+to view all the commit history
+$ git log
+$ git log --online (formats the entry to one line)
+
+to amend the last committed message
+$ git commit -m "change the last committed message" --amend
+
+to view comprehensive changes in the log
+$ git log -p
+
+to restore to a previous committed versions
+$ git reset hashcode
+
+rebasing modifies commit orders, removals, and other advance changes to commits
+$ git rebase -i --root
