@@ -1,0 +1,33 @@
+Git - open source and free source control management (SCM)
+Manage changes to files over time, view previous changes, compare different versions, track changes
+
+setup user name
+$ git config --global user.name "First Last"
+
+setup email address
+$ git config --global user.email "test@gmail.com"
+
+setup default branch name
+$ git config --global init.default branch main
+
+initialize repository
+$ cd c:\folder\repository
+
+$ git init
+
+status of repository
+$ git status
+
+if any files are untracked then Git won't keep track of any changes to that file
+
+to stage or track a file
+$ git add filename.txt (case sensitive and include file extension)
+
+to unstage or untrack a file
+$ git rm --cached filename.txt
+
+ignore files from commit
+create .gitignore file
+add file name or *.ext to ignore all ext type files
+
+	use powershell "ren gitignore.txt .gitignore" to rename gitignore.txt to .gitignore file
