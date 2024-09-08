@@ -127,6 +127,3 @@ fetch remote repo to local repo
 
 fetch and merge as one command
 	$ git pull
-
-
-deleted test and created testb
