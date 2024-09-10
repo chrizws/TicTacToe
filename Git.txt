@@ -120,7 +120,6 @@ create connection to remote repository
 push all the branches
 	$ git push --all 
 	
-	
 fetch remote repo to local repo
 	$ git fetch
 	$ git merge
