@@ -1,6 +1,10 @@
-Git - open source and free source control management (SCM)
+Git - open source and free source control management (SCM) or version control system (VCS)
+
 Manage changes to files over time, view previous changes, compare different versions, track changes
 
+
+
+//SETUP AND INITIALIZATION
 setup user name
 	$ git config --global user.name "First Last"
 
@@ -9,17 +13,18 @@ setup email address
 
 initialize repository
 	$ cd c:\folder\repository
-	$ git init
+	$ git init //initializes the directory as a git repository
 
 state of working directory and staging area
-	$ git status
+	$ git status //shows tracked and untracked files
 
 
 
 
-if any files are untracked then Git won't keep track of any changes to that file
+//STAGING
+if file is not staged (tracked) then Git will not keep any record of that file
 
-to stage a single file, staging prepares the file to be committed
+to stage a single file to the staging environment
 	$ git add filename.txt (case sensitive and include file extension)
 
 to track all the files in a folder to the staging area
@@ -27,21 +32,25 @@ to track all the files in a folder to the staging area
 	$ git add A
 	$ git add --All
 
-to unstage or untrack a file
+to unstage or untrack a file from the staging environment
 	$ git rm --cached filename.txt
 
 to ignore files and prevent tracking
-	create .gitignore file or use powershell "ren gitignore.txt .gitignore" to rename gitignore.txt to .gitignore file
-	add file name or *.ext to ignore all ext type files
+	//create .gitignore file or use powershell "ren gitignore.txt .gitignore" to rename gitignore.txt to .gitignore file
+	//add file name or *.ext to ignore all ext type files
 
 reset staging area to the last commit
 	$ git reset
 
 
 
-	
-Commit takes a snapshot of files at this moment in time
+
+//COMMIT
+Commit is a "save point" or snapshot of files from the staging area
 	$ git commit -m "insert commit message here"
+	
+skipping the staging area and commit directly
+	$ git commit -a -m "commit directly and skip staging"
 
 to display changes in the committed file vs what's changed in the uncomitted file
 	$ git diff
@@ -56,23 +65,22 @@ to restore file that was deleted
 
 
 
-three types of git environments
-	working tree to make changes and edits
-		to commit directly without going to staging 
-		$ git commit -a -m "commit directly and skips staging"
+//REVERSE STAGING
+working directory to commit directly without going to staging 
+	$ git commit -a -m "commit directly and skips staging"
 		
-	staging / index tracks the files to be committed 
-		remove from staging back to working files environments
-		$ git restore --staged filename
+remove from staging area back to working directory
+	$ git restore --staged filename
 		
-	commit takes the changes made into the log
+commit takes the changes made into the log
 
 
 
 
+//LOG AND HISTORY
 to view all the commit history
 	$ git log
-	$ git log --online (formats the entry to one line)
+	$ git log --oneline (formats the entry to one line)
 
 to amend the last committed message
 	$ git commit -m "change the last committed message" --amend
@@ -89,6 +97,7 @@ rebasing modifies commit orders, removals, and other advance changes to commits
 
 
 
+//CREATING AND SWITCHING BRANCHES
 create a new branch
 	$ git branch branchName
 
@@ -101,15 +110,22 @@ switch branch
 create and switch to new branch
 	$ git switch -c branchName
 
+
+
+
+//MERGING AND DELETING BRANCH
 merge the branches together
+	$ git switch main //switch to the main branch for merging
 	$ git merge -m "merge message" branchToMerge
 
-delete a branch
+delete a branch after merging 
 	$ git branch -d branchName
 
 
 
 
+
+//REMOTE REPOSITORY
 create connection to remote repository
 	$ git remote add origin http://github.com/user/repo.git
 	
@@ -121,8 +137,11 @@ push all the branches
 	$ git push --all 
 	
 fetch remote repo to local repo
-	$ git fetch
-	$ git merge
+	$ git fetch origin //gets all the change history of a tracked branch/repo
+	$ git merge origin/main //combine current branch with a specified branch
 
 fetch and merge as one command
 	$ git pull
+	
+view all local and remote branches
+	$ git branch -a
