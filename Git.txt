@@ -145,3 +145,13 @@ fetch and merge as one command
 	
 view all local and remote branches
 	$ git branch -a
+
+
+
+//GITHUB FLOW
+	1. Create a new Branch //experiment by creating own unique branch
+	2. Make changes and add Commits //modify existing code and track work
+	3. Open a Pull Request //ready for review
+	4. Review //discussion and review of the changes
+	5. Deploy //test the branch before merging with main
+	6. Merge //finalize the merge to main
