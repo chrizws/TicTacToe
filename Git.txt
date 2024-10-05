@@ -145,7 +145,3 @@ fetch and merge as one command
 	
 view all local and remote branches
 	$ git branch -a
-	
-branch2
-branch2
-branch2
